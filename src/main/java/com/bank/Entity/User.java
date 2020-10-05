@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -11,7 +12,7 @@ import java.io.Serializable;
 @Table(name = "User")
 public class User implements Serializable
 {
-    private int userId;
+    private int userid;
     private String password;
     private String firstName;
     private String lastName;
@@ -20,13 +21,14 @@ public class User implements Serializable
     private String dob;
     private String email;
 
-    @Column(name = "userId", nullable = false)
+    @Id
+    @Column(name = "userid", nullable = false)
     public int getUserId() {
-        return userId;
+        return userid;
     }
 
     public void setUserId(int userId) {
-        this.userId = userId;
+        this.userid = userId;
     }
 
     @Column(name = "password", nullable = false)
@@ -38,7 +40,7 @@ public class User implements Serializable
         this.password = password;
     }
 
-    @Column(name = "firstName", nullable = false)
+    @Column(name = "firstname", nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -47,7 +49,7 @@ public class User implements Serializable
         this.firstName = firstName;
     }
 
-    @Column(name = "lastName", nullable = false)
+    @Column(name = "lastname", nullable = false)
     public String getLastName() {
         return lastName;
     }
@@ -56,7 +58,7 @@ public class User implements Serializable
         this.lastName = lastName;
     }
 
-    @Column(name = "addressId", nullable = false)
+    @Column(name = "addressid", nullable = false)
     public int getAddress() {
         return addressId;
     }
@@ -64,6 +66,7 @@ public class User implements Serializable
     public void setAddress(int address) {
         this.addressId = address;
     }
+
     @Column(name = "ssn", nullable = false)
     public int getSsn() {
         return ssn;
@@ -72,6 +75,7 @@ public class User implements Serializable
     public void setSsn(int ssn) {
         this.ssn = ssn;
     }
+
     @Column(name = "dob", nullable = false)
     public String getDob() {
         return dob;

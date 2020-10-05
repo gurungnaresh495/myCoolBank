@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>Save User</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3>Employee Directory</h3>
+    <hr>
+
+    <p class="h4 mb-4">Save Employee</p>
+
+    <form action="#" th:action="@{/addUser}" method="POST">
+        <input type="number" th:value="${user.userid}" name="userid"
+               placeholder="eID">
+        <input type="text" th:value="${user.email}" name="email"
+               placeholder="email please">
+
+        <input type="text" th:value="${user.password}" name="password"
+               placeholder="Password">
+        <input type="text" th:value="${user.firstName}" name="firstName"
+               placeholder="Fname">
+
+        <input type="text" th:value="${user.lastName}" name="lastName"
+               placeholder="Lastname">
+        <input type="number" th:value="${user.addressId}" name="addressId"
+               placeholder="Address">
+        <input type="number" th:value="${user.ssn}" name="ssn"
+               placeholder="SSN">
+        <input type="text" th:value="${user.dob}" name="dob"
+               placeholder="Date Of Birth">
+        <button type="submit" class="btn btn-info col-2">Save</button>
+
+    </form>
+
+    <hr>
+
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
