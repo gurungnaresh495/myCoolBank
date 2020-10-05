@@ -2,6 +2,7 @@ package com.bank.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Deposit {
     private float depositAmount;
     private int accountNo;
 
+    @Id
     @Column(name = "depositNo", nullable = false)
     public int getDepositNo() {
         return depositNo;

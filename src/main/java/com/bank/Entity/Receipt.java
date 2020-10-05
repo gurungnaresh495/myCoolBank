@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -17,6 +18,7 @@ public class Receipt implements Serializable
     private float afterAmount;
     private float amount;
 
+    @Id
     @Column(name = "receiptNo", nullable = false)
     public int getReceiptNo() {
         return receiptNo;
